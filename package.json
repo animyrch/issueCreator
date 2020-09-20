@@ -4,7 +4,7 @@
   "description": "Create issues automatically from JSON for Github",
   "main": "index.js",
   "scripts": {
-    "test": "node ./test/tests.js"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/animyrch/issueCreator#readme",
   "dependencies": {
+    "axios": "^0.20.0",
     "prompt": "^1.0.0"
+  },
+  "devDependencies": {
+    "mocha": "^8.1.3"
   }
 }
