@@ -1,7 +1,7 @@
 {
   "name": "issuecreator",
-  "version": "0.0.1-alpha",
-  "description": "create issues for Github from the command line",
+  "version": "0.0.1",
+  "description": "Create issues automatically from JSON for Github",
   "main": "index.js",
   "scripts": {
     "test": "test"
@@ -10,18 +10,13 @@
     "type": "git",
     "url": "git+https://github.com/animyrch/issueCreator.git"
   },
-  "keywords": [
-    "issue",
-    "github",
-    "project",
-    "management",
-    "agile",
-    "scrum"
-  ],
   "author": "Emir OZCELIK",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/animyrch/issueCreator/issues"
   },
-  "homepage": "https://github.com/animyrch/issueCreator#readme"
+  "homepage": "https://github.com/animyrch/issueCreator#readme",
+  "dependencies": {
+    "prompt": "^1.0.0"
+  }
 }
