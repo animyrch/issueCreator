@@ -8,9 +8,7 @@ const processIssues = async (issues, { githubUsername, githubRepositoryName, git
   // acquiring github repository id from repository owner and repo name
   const repositoryId = await getRepoId({ githubUsername, githubRepositoryName, token });
   // add all issues to the repository
-  issues.map(async (issue) => {
-    await addNewIssue(issue, { repositoryId, token });
-  });
+  return issues.map(async (issue) => addNewIssue(issue, { repositoryId, token }));
 }
 
 const getRepoId = async ({ githubUsername, githubRepositoryName, token }) => {
@@ -25,6 +23,7 @@ const addNewIssue = async (issue, { repositoryId, token }) => {
   const mutation = createIssueGraph(issue);
   const { createIssue } = await addIssueToGithub(mutation, token);
   console.log(`Created issue #${createIssue.issue.number} : ${createIssue.issue.title}`);
+  return createIssue.issue.number;
 }
 
 module.exports = {
