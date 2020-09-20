@@ -1,8 +1,10 @@
 [
   {
-    "title": "Issue 1"
+    "title": "Issue 1",
+    "body": "Issue description"
   },
   {
-    "title": "Issue 2"
+    "title": "Issue 2 (If absent, empty string is default value)",
+    "body": "Another issue description (If absent, empty string is default value)"
   }
 ]
