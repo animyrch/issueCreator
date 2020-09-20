@@ -2,6 +2,7 @@
 
 const prompt = require('prompt');
 const { getRepo } = require('./internals/graphGetRepo');
+const { createIssue } = require('./internals/graphCreateIssue');
 
 const promptAttributes = [
   {
@@ -32,12 +33,26 @@ prompt.get(promptAttributes, (error, { githubUsername, githubRepositoryName, git
       }
     }`;
     getRepo(query, token)
-      .then(result => console.log(result));
-    // console.log(repository);
-    // console.log(token);
+      .then(({ repository }) => { 
+        const mutation = `mutation CreateIssue { 
+          createIssue(input: {
+            repositoryId:"${repository.id}", 
+            title: "new issue from program", 
+            body:"New issue"
+            }
+          ) {
+            issue{
+              body
+            }
+          }
+        }`;
+        createIssue(mutation, token)
+          .then(({ createIssue }) => {
+            console.log(createIssue.issue.body)
+          });
+      })
+      .catch(error => {
+        console.log(error);
+      });
   }
 });
-
-
-
-
