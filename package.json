@@ -1,6 +1,6 @@
 {
   "name": "issuecreator",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "Create issues automatically from JSON for Github",
   "main": "index.js",
   "scripts": {
