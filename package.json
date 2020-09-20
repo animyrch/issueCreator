@@ -4,7 +4,7 @@
   "description": "Create issues automatically from JSON for Github",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "node ./test/tests.js"
   },
   "repository": {
     "type": "git",
