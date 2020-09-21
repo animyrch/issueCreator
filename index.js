@@ -1,9 +1,11 @@
 #!/usr/bin/env node
 
 try {
+  const { argv } = require('yargs');
+	console.log(argv._[0]);
   const { processIssues } = require('./internals/processIssues');
   const prompt = require('prompt');
-  const issues = require('./issues.json');
+  const issues = require(argv._[0]);
 
   const promptAttributes = [
     {
