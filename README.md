@@ -20,7 +20,7 @@ $ issuecreator <path-to-your-issues.json-file>
     "body": "Issue description"
    },
    {
-     "title": "Issue 2 (If absent, empty string is default value even though I do't know why you would leave title empty)",
+     "title": "Issue 2 (If absent, empty string is default value even though I don't know why you would leave title empty)",
      "body": "Another issue description (If absent, empty string is default value)"
     }
 ]
