@@ -2,8 +2,7 @@
 
 try {
   const { argv } = require('yargs');
-	console.log(argv._[0]);
-  const { processIssues } = require('./internals/processIssues');
+  const { processIssues } = require('../lib/processIssues');
   const prompt = require('prompt');
   const issues = require(argv._[0]);
 

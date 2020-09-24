@@ -2,7 +2,7 @@ const assert = require('assert');
 const sinon = require('sinon');
 
 const issues = require('./fixtures/issues.json');
-const { processIssues } = require('../internals/processIssues');
+const { processIssues } = require('../lib/processIssues');
 const axios = require('axios');
 
 
