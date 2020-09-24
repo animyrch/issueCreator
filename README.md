@@ -11,6 +11,8 @@ $ touch issues.json
 # start the cli tool
 $ issuecreator <path-to-your-issues.json-file>
 ```
+It is created to be used globally but you can also install locally and then run `node lib/index.js <issues.json file path>`
+
 ## `issues.json` example
 
 ```js
